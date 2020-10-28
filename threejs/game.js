@@ -10,8 +10,6 @@ var world, clock;
 // Objetos
 var materialEsfera, woodMaterial, animalMaterial;
 
-// Posiciones para los ciervos
-var deerpositions = [-1700, -1100, -500, 0, 800, 1800]
 var text;
 var hero;
 var score, highscore = 0;
@@ -235,9 +233,6 @@ function setCameras(ar){
 
     scene.add(camera);
 
-     // ¿Necesario?
-    //cameraControls = new THREE.OrbitControls( minimap, renderer.domElement );
-    //cameraControls.target.set( 0, 0, 0 );
    
 }
 
@@ -380,7 +375,6 @@ function loadDeers(){
     loader.load( 'models/ciervo.json' , 
         function(obj){
             var objtx = new THREE.MaterialLoader().load('images/deer.png');
-            //var a = new animal(new CANNON.Vec3( 0, 2, position ), objtx );
             
             obj.material.map = objtx;
             obj.receiveShadow = true;
@@ -429,8 +423,6 @@ function loadDeers(){
     loader2.load( 'models/ciervomacho.json' , 
         function(obj2){
             var objtx = new THREE.MaterialLoader().load('images/deer2.png');
-            //var a = new animal(new CANNON.Vec3( 0, 2, position ), objtx );
-            
             obj2.material.map = objtx;
             obj2.receiveShadow = true;
             obj2.castShadow = true;
@@ -477,7 +469,6 @@ function loadDeers(){
     loader.load( 'models/ciervo.json' , 
         function(obj){
             var objtx = new THREE.MaterialLoader().load('images/deer.png');
-            //var a = new animal(new CANNON.Vec3( 0, 2, position ), objtx );
             
             obj.material.map = objtx;
             obj.receiveShadow = true;
@@ -581,7 +572,6 @@ function cameraUpdate(distance){
 }
 
 function onKeyDown(event){
-    var distance = xSpeed * deltaTime;
     switch(event.keyCode){
         case space:
             if(onGround){
@@ -628,8 +618,6 @@ function update()
         world.step(seconds);             // recalcula el mundo tras ese tiempo
         totalTime += seconds;
         score = totalTime;
-        //hero.body.position.x += 1;
-        //hero.body.velocity.z = seconds * (-speed);
         if(jumping){
             hero.body.velocity.y = 10;
         }
@@ -681,10 +669,6 @@ if(hero.body.position.z < -2010){
             showFinish()
         finish = true;
     }
-    /*if(finish){
-        showFinish();
-    }*/
-
     // Actualiza el monitor 
     stats.update();
 
@@ -725,6 +709,5 @@ function render()
     camera.position.y = hero.body.position.y + 5;
     requestAnimationFrame( render );
     update();
-    //camera.lookAt(hero.body.position);
     renderer.render( scene, camera );
 }

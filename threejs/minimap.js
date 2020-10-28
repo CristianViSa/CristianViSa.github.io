@@ -8,7 +8,7 @@ var arm, axis, ball, rectangle;                                                 
 var forearm, foreBase, foreRect1, foreRect2, foreRect3, foreRect4, foreHand;    // Para el antebrazo
 var gripper1, gripper2,cube1, cube2, cube3, cube4;                                                                // Para las pinzas
 
-var r = t = 100;
+var r = t = 400;
 var l = b = -r;
 
 init();
