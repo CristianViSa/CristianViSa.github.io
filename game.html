@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- 
+  Ejemplos sobre Three.js : Cubo texturado animado
+   	Cubo con color por vertice y mapa uv sobre textura en cruz;
+   	Util para comprobar si funciona Threejs sobre el navegador.
+  rvivo@upv.es 2015
+-->
+<html lang="es">
+	<head>
+		<meta charset='utf-8'>
+		<title>Run game</title>
+		<style>
+			body {
+				background-color: white;
+				margin: 0px;
+				overflow: hidden;
+			}
+
+			#score {
+			color:#FFFFFF;
+			background-color: black;
+			font-size:200%;
+			font-weight:bold;
+			position: absolute;
+			top: 10%;
+			left: 0%;
+			width: 25%;
+			}
+
+			#highscore {
+			color:#FFFFFF;
+			background-color: black;
+			font-size:200%;
+			font-weight:bold;
+			position: absolute;
+			top: 20%;
+			left: 0%;
+			width: 25%;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Contenedor del app -->
+		<div id="container"></div>
+
+		<div id="score"></div>
+		<div id="highscore"></div>
+		<!-- Scripts de biblioteca -->
+		<script src="lib/three.min_r96.js"></script>
+        <script src="lib/OrbitControls.js"></script>
+        <script src="lib/tween_18.js"></script>
+        <script src="lib/dat.gui.min.js"></script>
+        <script src="lib/stats.min.js"></script>
+        <script src="lib/Coordinates.js"></script>
+        <script src="lib/cannon_062.js"></script>
+
+
+       <script src="threejs/game.js"></script>
+
+	</body>
+</html>
