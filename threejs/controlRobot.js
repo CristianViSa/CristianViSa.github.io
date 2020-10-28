@@ -60,19 +60,15 @@ function onKeyDown(event){
     switch(event.keyCode){
         case arrowUp:
             robot.position.x += distance;
-            minimap.position.x +=  distance;
             break;
         case arrowDown:
             robot.position.x -= distance;
-            minimap.position.x -= distance;
             break;
         case arrowLeft:
             robot.position.z -= distance;
-            minimap.position.z -= distance;
             break;
         case arrowRight:
             robot.position.z += distance;
-            minimap.position.z += distance;
             break;
         }
 }
